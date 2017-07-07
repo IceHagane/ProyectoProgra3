@@ -54,7 +54,7 @@ namespace Proyecto_Progra_3
             string CadSql;
 
             CadSql = "SELECT nom_usuario,pass_usuario, id_tipo_usuario from usuarios where nom_usuario='"+usuario+"';";
-           MySqlDataReader Rec = null;
+            con.Rec = null;
             try
             {
                 con.EjecutarConsulta(CadSql);
@@ -62,8 +62,7 @@ namespace Proyecto_Progra_3
                 {
                     ClaseArchivador.username = con.Rec["nom_usuario"].ToString();
                     ClaseArchivador.password = con.Rec["pass_usuario"].ToString();
-                   
-                    ClaseArchivador.id_privilegio = Convert.ToInt32(Rec["id_tipo_usuario"]);
+                    ClaseArchivador.id_privilegio = Convert.ToInt32(con.Rec["id_tipo_usuario"]);
                 }
             }
             catch(Exception ex)

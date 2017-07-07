@@ -41,7 +41,17 @@ namespace Proyecto_Progra_3
                 txtContraseña.Focus();
             }
             {
-                string CadSql;
+               
+                }
+
+
+            }
+
+        
+
+        public void consultarUsuario()
+        {
+     string CadSql;
                 CadSql = "SELECT nom_usuario FROM USUARIOS WHERE nom_usuario='" + txtUsuario.Text + "';";
                 try
                 {
@@ -50,8 +60,8 @@ namespace Proyecto_Progra_3
                     {
                         ClaseArchivador.usuario_nuevo = con.Rec["nom_usuario"].ToString();
                     }
-                    string ad = ClaseArchivador.usuario_nuevo.ToString();
-                    if (txtUsuario.Text.Equals(ad))
+                  
+                    if (txtUsuario.Text.Equals(ClaseArchivador.usuario_nuevo.ToString()))
                     {
                         MessageBox.Show("El usuario ya existe");
                         Limpiar();
@@ -59,24 +69,7 @@ namespace Proyecto_Progra_3
                     else
                     {
 
-                        string CadSql2, nom_usuario, pass_usu;
-                        int cod_usu; 
-                         nom_usuario = txtUsuario.Text;
-                         pass_usu = txtContraseña.Text;
-                         cod_usu = Convert.ToInt32(cboPermisos.SelectedValue);
-                        CadSql2 = "INSERT INTO usuarios(nom_usuario,pass_usuario,id_tipo_usuario) VALUES('" + txtUsuario.Text + "','" +
-                            txtContraseña.Text + "'," + cboPermisos.SelectedValue + ");";
-                        try
-                        {
-                            con.EjecutarIUD(CadSql2);
-                            MessageBox.Show("Usuario" + txtUsuario.Text.ToUpper() + " Registrado con Exito");
-                            Limpiar();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }
-
+                        
 
                     }
 
@@ -93,10 +86,28 @@ namespace Proyecto_Progra_3
                         con.CerrarConexion();
                         con.Rec = null;
                     }
-                }
+        }
 
-
+        public void InsertarUsuario()
+        {
+            string CadSql2, nom_usuario, pass_usu;
+            int cod_usu;
+            nom_usuario = txtUsuario.Text;
+            pass_usu = txtContraseña.Text;
+            cod_usu = Convert.ToInt32(cboPermisos.SelectedValue);
+            CadSql2 = "INSERT INTO usuarios(nom_usuario,pass_usuario,id_tipo_usuario) VALUES('" + txtUsuario.Text + "','" +
+                txtContraseña.Text + "'," + cboPermisos.SelectedValue + ");";
+            try
+            {
+                con.EjecutarIUD(CadSql2);
+                MessageBox.Show("Usuario" + txtUsuario.Text.ToUpper() + " Registrado con Exito");
+                Limpiar();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
 
         }
         public void Privilegios()
