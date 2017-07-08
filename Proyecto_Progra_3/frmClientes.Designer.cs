@@ -236,7 +236,7 @@
             this.cmdLimpiar.TabIndex = 19;
             this.cmdLimpiar.Text = "Limpiar";
             this.cmdLimpiar.UseVisualStyleBackColor = true;
-            this.cmdLimpiar.Click += new System.EventHandler(this.cmdLimpiar_Click);
+
             // 
             // frmClientes
             // 
