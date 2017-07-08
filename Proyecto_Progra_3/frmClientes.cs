@@ -40,7 +40,7 @@ namespace Proyecto_Progra_3
             CadSql = "select des_ciudad, cod_ciudad from ciudades ";
             Subrrutinas.llenarCombobox(cboCiudad, CadSql, "des_ciudad", "cod_ciudad");
             CadSql = "select des_comuna, cod_comuna from comunas";
-            Subrrutinas.llenarCombobox(cboComuna, CadSql, "des_comuna", "cod_comuna");
+            Subrrutinas.llenarCombobox(cboComuna, CadSql, "des_comuna", "cod_comuna"); 
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
