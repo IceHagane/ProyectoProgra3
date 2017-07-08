@@ -16,6 +16,7 @@ namespace Proyecto_Progra_3
         public FrmGestionProducto()
         {
             InitializeComponent();
+            llenardgv();
         }
 
         private void llenardgv()
@@ -63,16 +64,107 @@ namespace Proyecto_Progra_3
             txtNombre.Text = "";
             txtPrecio.Text = "";
             txtStock.Text = "";
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            llenardgv();
+            txtEntidad.Enabled = true;
+            txtCodigo.Enabled = true;
+            dgvProductos.Enabled = true;
         }
 
         private void cmdLimpiar_Click(object sender, EventArgs e)
         {
             limpiar();
+        }
+
+        private void cmdModificar_Click(object sender, EventArgs e)
+        {
+            Conexion con = new Conexion();
+            string codProd = txtCodigo.Text;
+            codProd = txtCodigo.Text;
+
+            string CadSql;
+            CadSql = "update productos set nom_producto='" + txtNombre.Text + "', precio_producto= '" + txtPrecio.Text + "', stock_producto= '" + txtStock.Text + "' where cod_producto='" + codProd + "'";
+
+            try
+            {
+                if (con.EjecutarIUD(CadSql) > 0)
+                {
+                    MessageBox.Show("Modificacion Completada", "Listo");
+                    limpiar();
+                }
+                else
+                {
+                    MessageBox.Show("Error De Modificacion", "ERROR");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            llenardgv();
+        }
+
+        private void cmdEliminar_Click(object sender, EventArgs e)
+        {
+            Conexion con = new Conexion();
+            string codProd = txtCodigo.Text;
+            codProd = txtCodigo.Text;
+
+            string CadSql;
+            CadSql = "DELETE FROM productos WHERE cod_producto = '" + codProd + "'";
+
+            try
+            {
+                if (con.EjecutarIUD(CadSql) > 0)
+                {
+                    MessageBox.Show("Producto Eliminado", "Listo");
+                    limpiar();
+                }
+                else
+                {
+                    MessageBox.Show("Producto NO Eliminado", "ERROR");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            llenardgv();
+        }
+
+        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string CadSql;
+            string codProd = dgvProductos.CurrentRow.Cells[0].Value.ToString();
+            CadSql = "select * from productos where cod_producto = '" + codProd + "' ";
+            Conexion con = new Conexion();
+            MySqlDataReader Rec = null;
+            try
+            {
+                con.AbrirConexion();
+                Rec = con.EjecutarConsulta(CadSql);
+                while (Rec.Read())
+                {
+                    txtCodigo.Text = Rec["cod_producto"].ToString();
+                    txtNombre.Text = Rec["nom_producto"].ToString();
+                    txtPrecio.Text = Rec["precio_producto"].ToString();
+                    txtStock.Text = Rec["stock_producto"].ToString();
+                    txtEntidad.Text = Rec["id_ent"].ToString();
+                    txtCodigo.Enabled = false;
+                    txtEntidad.Enabled = false;
+                    dgvProductos.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (Rec != null)
+                {
+                    Rec.Close();
+                    Rec = null;
+                }
+            }
         }
     }
 }

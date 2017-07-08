@@ -28,16 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGestionProducto));
-            this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.Cod_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nom_prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id_entidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nom_Ent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,58 +43,15 @@
             this.cmdEliminar = new System.Windows.Forms.Button();
             this.cmdModificar = new System.Windows.Forms.Button();
             this.cmdLimpiar = new System.Windows.Forms.Button();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.Cod_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nom_prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_entidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nom_Ent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvProductos
-            // 
-            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Cod_Prod,
-            this.nom_prod,
-            this.Precio,
-            this.Stock,
-            this.Id_entidad,
-            this.Nom_Ent});
-            this.dgvProductos.Location = new System.Drawing.Point(12, 175);
-            this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.Size = new System.Drawing.Size(644, 150);
-            this.dgvProductos.TabIndex = 0;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // Cod_Prod
-            // 
-            this.Cod_Prod.HeaderText = "Codigo Producto";
-            this.Cod_Prod.Name = "Cod_Prod";
-            // 
-            // nom_prod
-            // 
-            this.nom_prod.HeaderText = "Nombre";
-            this.nom_prod.Name = "nom_prod";
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.Name = "Stock";
-            // 
-            // Id_entidad
-            // 
-            this.Id_entidad.HeaderText = "Entidad";
-            this.Id_entidad.Name = "Id_entidad";
-            // 
-            // Nom_Ent
-            // 
-            this.Nom_Ent.HeaderText = "Nombre Entidad";
-            this.Nom_Ent.Name = "Nom_Ent";
             // 
             // label1
             // 
@@ -204,6 +152,7 @@
             this.cmdEliminar.TabIndex = 23;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = true;
+            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
             // cmdModificar
             // 
@@ -213,6 +162,7 @@
             this.cmdModificar.TabIndex = 24;
             this.cmdModificar.Text = "Modificar";
             this.cmdModificar.UseVisualStyleBackColor = true;
+            this.cmdModificar.Click += new System.EventHandler(this.cmdModificar_Click);
             // 
             // cmdLimpiar
             // 
@@ -224,11 +174,66 @@
             this.cmdLimpiar.UseVisualStyleBackColor = true;
             this.cmdLimpiar.Click += new System.EventHandler(this.cmdLimpiar_Click);
             // 
+            // dgvProductos
+            // 
+            this.dgvProductos.AllowUserToAddRows = false;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cod_Prod,
+            this.nom_prod,
+            this.Precio,
+            this.Stock,
+            this.Id_entidad,
+            this.Nom_Ent});
+            this.dgvProductos.Location = new System.Drawing.Point(14, 175);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.ReadOnly = true;
+            this.dgvProductos.Size = new System.Drawing.Size(644, 150);
+            this.dgvProductos.TabIndex = 26;
+            this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
+            // 
+            // Cod_Prod
+            // 
+            this.Cod_Prod.HeaderText = "Codigo Producto";
+            this.Cod_Prod.Name = "Cod_Prod";
+            this.Cod_Prod.ReadOnly = true;
+            // 
+            // nom_prod
+            // 
+            this.nom_prod.HeaderText = "Nombre";
+            this.nom_prod.Name = "nom_prod";
+            this.nom_prod.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            // 
+            // Id_entidad
+            // 
+            this.Id_entidad.HeaderText = "Entidad";
+            this.Id_entidad.Name = "Id_entidad";
+            this.Id_entidad.ReadOnly = true;
+            // 
+            // Nom_Ent
+            // 
+            this.Nom_Ent.HeaderText = "Nombre Entidad";
+            this.Nom_Ent.Name = "Nom_Ent";
+            this.Nom_Ent.ReadOnly = true;
+            // 
             // FrmGestionProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 337);
+            this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.cmdLimpiar);
             this.Controls.Add(this.cmdModificar);
             this.Controls.Add(this.cmdEliminar);
@@ -243,7 +248,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvProductos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmGestionProducto";
             this.Text = "Eliminar/Modificar Producto";
@@ -255,14 +259,6 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvProductos;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cod_Prod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nom_prod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_entidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nom_Ent;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -277,5 +273,12 @@
         private System.Windows.Forms.Button cmdEliminar;
         private System.Windows.Forms.Button cmdModificar;
         private System.Windows.Forms.Button cmdLimpiar;
+        private System.Windows.Forms.DataGridView dgvProductos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cod_Prod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nom_prod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_entidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nom_Ent;
     }
 }
