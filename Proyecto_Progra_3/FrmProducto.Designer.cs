@@ -60,7 +60,6 @@
             this.btnIngresar.TabIndex = 20;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
-     
             this.btnIngresar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnIngresar_MouseClick);
             // 
             // cboEntidad
@@ -137,7 +136,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(16, 16);
+            this.label1.Location = new System.Drawing.Point(44, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(253, 25);
             this.label1.TabIndex = 11;
@@ -159,7 +158,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmProducto";
             this.Text = "Ingreso De Productos";
             this.Load += new System.EventHandler(this.FrmProducto_Load);

@@ -30,12 +30,14 @@
         {
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.agregarNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +62,13 @@
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
+            // agregarNuevoUsuarioToolStripMenuItem
+            // 
+            this.agregarNuevoUsuarioToolStripMenuItem.Name = "agregarNuevoUsuarioToolStripMenuItem";
+            this.agregarNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.agregarNuevoUsuarioToolStripMenuItem.Text = "Agregar Nuevo Usuario";
+            this.agregarNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.agregarNuevoUsuarioToolStripMenuItem_Click);
+            // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
@@ -74,9 +83,26 @@
             // 
             // productosToolStripMenuItem
             // 
+            this.productosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ingresarProductoToolStripMenuItem,
+            this.gestionarProductoToolStripMenuItem});
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
             this.productosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.productosToolStripMenuItem.Text = "Productos";
+            // 
+            // ingresarProductoToolStripMenuItem
+            // 
+            this.ingresarProductoToolStripMenuItem.Name = "ingresarProductoToolStripMenuItem";
+            this.ingresarProductoToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.ingresarProductoToolStripMenuItem.Text = "Ingresar Producto";
+            this.ingresarProductoToolStripMenuItem.Click += new System.EventHandler(this.ingresarProductoToolStripMenuItem_Click);
+            // 
+            // gestionarProductoToolStripMenuItem
+            // 
+            this.gestionarProductoToolStripMenuItem.Name = "gestionarProductoToolStripMenuItem";
+            this.gestionarProductoToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.gestionarProductoToolStripMenuItem.Text = "Gestionar Producto";
+            this.gestionarProductoToolStripMenuItem.Click += new System.EventHandler(this.gestionarProductoToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -95,13 +121,6 @@
             this.lblUsuario.Size = new System.Drawing.Size(16, 13);
             this.lblUsuario.TabIndex = 3;
             this.lblUsuario.Text = "...";
-            // 
-            // agregarNuevoUsuarioToolStripMenuItem
-            // 
-            this.agregarNuevoUsuarioToolStripMenuItem.Name = "agregarNuevoUsuarioToolStripMenuItem";
-            this.agregarNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.agregarNuevoUsuarioToolStripMenuItem.Text = "Agregar Nuevo Usuario";
-            this.agregarNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.agregarNuevoUsuarioToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal
             // 
@@ -130,5 +149,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.ToolStripMenuItem agregarNuevoUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ingresarProductoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionarProductoToolStripMenuItem;
     }
 }

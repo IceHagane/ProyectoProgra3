@@ -28,5 +28,18 @@ namespace Proyecto_Progra_3
             nuevoUsuario frm = new nuevoUsuario();
             frm.ShowDialog();
         }
+
+
+        private void ingresarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProducto frm = new FrmProducto();
+            frm.ShowDialog();
+        }
+
+        private void gestionarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmGestionProducto frm = new FrmGestionProducto();
+            frm.ShowDialog();
+        }
     }
 }

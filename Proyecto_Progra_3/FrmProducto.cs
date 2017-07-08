@@ -35,7 +35,7 @@ namespace Proyecto_Progra_3
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != '\b')
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
             {
                 e.KeyChar = Convert.ToChar(0);
             }
@@ -43,7 +43,8 @@ namespace Proyecto_Progra_3
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+            
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != '\b')
             {
                 e.KeyChar = Convert.ToChar(0);
             }
@@ -60,7 +61,7 @@ namespace Proyecto_Progra_3
         private void btnIngresar_MouseClick(object sender, MouseEventArgs e)
         {
             string nom;
-            int prec, stock, id_ent;
+            int prec, stock;
             nom = txtNombre.Text;
             prec = int.Parse(txtPrecio.Text);
             stock = int.Parse(txtStock.Text);
@@ -119,9 +120,5 @@ namespace Proyecto_Progra_3
                 }
             }
         }
-
-     
-
-
     }
 }
