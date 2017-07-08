@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Progra_3
 {
-    class ClaseArchivador
+    public  class ClaseArchivador
     {
-        public static string username { get; set; }
+        public  static string username { get; set; }
         public static string password { get; set; }
-        public static int id_privilegio { get; set; }
-        public static string usuario_nuevo { get; set; }
+        public   static int id_privilegio { get; set; }
+        public  string usuario_nuevo { get; set; }
+        
     }
 }

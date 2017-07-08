@@ -41,5 +41,12 @@ namespace Proyecto_Progra_3
             FrmGestionProducto frm = new FrmGestionProducto();
             frm.ShowDialog();
         }
+
+        private void cerrarAplicaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+      
     }
 }

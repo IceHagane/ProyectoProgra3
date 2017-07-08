@@ -50,3 +50,5 @@ C:\Users\Daniel\Documents\Visual Studio 2013\Projects\ProyectoProgra3\Proyecto_P
 C:\Users\Daniel\Documents\Visual Studio 2013\Projects\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.csproj.GenerateResource.Cache
 C:\Users\Daniel\Documents\Visual Studio 2013\Projects\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.pdb
 C:\Users\Daniel\Documents\Visual Studio 2013\Projects\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.FrmGestionProducto.resources
+C:\Users\IceHagane\Documents\GitHub\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.frmClientes.resources
+C:\Users\IceHagane\Documents\GitHub\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.FrmGestionProducto.resources

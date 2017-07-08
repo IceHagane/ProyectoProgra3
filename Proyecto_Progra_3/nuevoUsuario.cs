@@ -13,8 +13,11 @@ namespace Proyecto_Progra_3
     public partial class nuevoUsuario : Form
     {
         Conexion con = new Conexion();
+        ClaseArchivador ca = new ClaseArchivador();
+        
         public nuevoUsuario()
         {
+         
             InitializeComponent();
             Privilegios();
 
@@ -40,12 +43,13 @@ namespace Proyecto_Progra_3
                 txtConfirmar.Text = "";
                 txtContraseña.Focus();
             }
+            else
             {
-               
-                }
-
-
+                consultarUsuario();
             }
+            
+
+        }
 
 
 
@@ -53,15 +57,17 @@ namespace Proyecto_Progra_3
         {
             string CadSql;
             CadSql = "SELECT nom_usuario FROM USUARIOS WHERE nom_usuario='" + txtUsuario.Text + "';";
+            ClaseArchivador archivador = new ClaseArchivador();
+            archivador.usuario_nuevo = "";
             try
             {
                 con.EjecutarConsulta(CadSql);
                 while (con.Rec.Read())
                 {
-                    ClaseArchivador.usuario_nuevo = con.Rec["nom_usuario"].ToString();
+                    archivador.usuario_nuevo = con.Rec["nom_usuario"].ToString();
                 }
 
-                if (txtUsuario.Text.Equals(ClaseArchivador.usuario_nuevo.ToString()))
+                if (archivador.usuario_nuevo.ToString() !="")
                 {
                     MessageBox.Show("El usuario ya existe");
                     Limpiar();
@@ -69,7 +75,7 @@ namespace Proyecto_Progra_3
                 else
                 {
 
-
+                    InsertarUsuario();
 
                 }
 
@@ -91,11 +97,9 @@ namespace Proyecto_Progra_3
 
         public void InsertarUsuario()
         {
-            string CadSql2, nom_usuario, pass_usu;
-            int cod_usu;
-            nom_usuario = txtUsuario.Text;
-            pass_usu = txtContraseña.Text;
-            cod_usu = Convert.ToInt32(cboPermisos.SelectedValue);
+            con.CerrarConexion();
+            string CadSql2;
+            
             CadSql2 = "INSERT INTO usuarios(nom_usuario,pass_usuario,id_tipo_usuario) VALUES('" + txtUsuario.Text + "','" +
                 txtContraseña.Text + "'," + cboPermisos.SelectedValue + ");";
             try
