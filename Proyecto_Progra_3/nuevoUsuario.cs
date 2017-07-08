@@ -47,45 +47,46 @@ namespace Proyecto_Progra_3
 
             }
 
-        
+
 
         public void consultarUsuario()
         {
-     string CadSql;
-                CadSql = "SELECT nom_usuario FROM USUARIOS WHERE nom_usuario='" + txtUsuario.Text + "';";
-                try
+            string CadSql;
+            CadSql = "SELECT nom_usuario FROM USUARIOS WHERE nom_usuario='" + txtUsuario.Text + "';";
+            try
+            {
+                con.EjecutarConsulta(CadSql);
+                while (con.Rec.Read())
                 {
-                    con.EjecutarConsulta(CadSql);
-                    while (con.Rec.Read())
-                    {
-                        ClaseArchivador.usuario_nuevo = con.Rec["nom_usuario"].ToString();
-                    }
-                  
-                    if (txtUsuario.Text.Equals(ClaseArchivador.usuario_nuevo.ToString()))
-                    {
-                        MessageBox.Show("El usuario ya existe");
-                        Limpiar();
-                    }
-                    else
-                    {
-
-                        
-
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
+                    ClaseArchivador.usuario_nuevo = con.Rec["nom_usuario"].ToString();
                 }
 
-                finally
+                if (txtUsuario.Text.Equals(ClaseArchivador.usuario_nuevo.ToString()))
                 {
-                    if (con.Rec != null)
-                    {
-                        con.CerrarConexion();
-                        con.Rec = null;
-                    }
+                    MessageBox.Show("El usuario ya existe");
+                    Limpiar();
+                }
+                else
+                {
+
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                if (con.Rec != null)
+                {
+                    con.CerrarConexion();
+                    con.Rec = null;
+                }
+            }
         }
 
         public void InsertarUsuario()

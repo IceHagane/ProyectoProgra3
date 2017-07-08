@@ -60,6 +60,7 @@
             this.btnIngresar.TabIndex = 20;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
+     
             this.btnIngresar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnIngresar_MouseClick);
             // 
             // cboEntidad

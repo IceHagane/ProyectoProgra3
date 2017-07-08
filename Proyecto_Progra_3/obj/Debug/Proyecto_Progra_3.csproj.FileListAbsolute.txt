@@ -23,3 +23,16 @@ C:\Users\IceHagane\Documents\GitHub\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\
 C:\Users\IceHagane\Documents\GitHub\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.pdb
 C:\Users\IceHagane\Documents\GitHub\ProyectoProgra3\Proyecto_Progra_3\bin\Debug\Proyecto_Progra_3.pdb
 C:\Users\IceHagane\Documents\GitHub\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.csprojResolveAssemblyReference.cache
+C:\Users\Pablo\Desktop\Escritorio\Cosas\Inacap\Taller de Programación III\Windows Form\ProyectoProgra3\Proyecto_Progra_3\bin\Debug\Proyecto_Progra_3.exe.config
+C:\Users\Pablo\Desktop\Escritorio\Cosas\Inacap\Taller de Programación III\Windows Form\ProyectoProgra3\Proyecto_Progra_3\bin\Debug\Proyecto_Progra_3.exe
+C:\Users\Pablo\Desktop\Escritorio\Cosas\Inacap\Taller de Programación III\Windows Form\ProyectoProgra3\Proyecto_Progra_3\bin\Debug\Proyecto_Progra_3.pdb
+C:\Users\Pablo\Desktop\Escritorio\Cosas\Inacap\Taller de Programación III\Windows Form\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.csprojResolveAssemblyReference.cache
+C:\Users\Pablo\Desktop\Escritorio\Cosas\Inacap\Taller de Programación III\Windows Form\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.frmMenuPrincipal.resources
+C:\Users\Pablo\Desktop\Escritorio\Cosas\Inacap\Taller de Programación III\Windows Form\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.FrmProducto.resources
+C:\Users\Pablo\Desktop\Escritorio\Cosas\Inacap\Taller de Programación III\Windows Form\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.Login.resources
+C:\Users\Pablo\Desktop\Escritorio\Cosas\Inacap\Taller de Programación III\Windows Form\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.nuevoUsuario.resources
+C:\Users\Pablo\Desktop\Escritorio\Cosas\Inacap\Taller de Programación III\Windows Form\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.Properties.Resources.resources
+C:\Users\Pablo\Desktop\Escritorio\Cosas\Inacap\Taller de Programación III\Windows Form\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.csproj.GenerateResource.Cache
+C:\Users\Pablo\Desktop\Escritorio\Cosas\Inacap\Taller de Programación III\Windows Form\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.exe
+C:\Users\Pablo\Desktop\Escritorio\Cosas\Inacap\Taller de Programación III\Windows Form\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.pdb
+C:\Users\Pablo\Desktop\Escritorio\Cosas\Inacap\Taller de Programación III\Windows Form\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.frmClientes.resources

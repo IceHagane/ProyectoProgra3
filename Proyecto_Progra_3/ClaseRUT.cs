@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Proyecto_Progra_3
+{
+    class ClaseRUT
+    {
+        public String formatear(string RUT)
+        {
+            int cont = 0;
+            String format;
+            if (RUT.Length == 0)
+            {
+                return "";
+            }
+            else
+            {
+                RUT.Replace(".", "");
+                RUT.Replace("-", "");
+                format = "-" + RUT.Substring(RUT.Length - 1);
+                for (int i = RUT.Length - 2; i >= 0; i--)
+                {
+                    format = RUT.Substring(i, 1) + format;
+                    cont++;
+                    if (cont == 3 && i != 0)
+                    {
+                        format = "." + format;
+                        cont = 0;
+                    }
+                }
+                return format;
+            }
+        }
+    }
+}
