@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows.Forms; 
 using System.Text.RegularExpressions;
 
 namespace Proyecto_Progra_3
@@ -19,6 +19,28 @@ namespace Proyecto_Progra_3
         public frmClientes()
         {
             InitializeComponent();
+        }
+
+        public void limpiar() 
+        {
+            this.txtNombre.Text = "";
+            this.txtEmail.Text = "";
+            this.txtNumero.Text = "";
+            this.mskRUT.Text = "";
+            this.mskTelefono.Text = "";
+            this.txtDireccion.Text = "";
+            this.txtGiro.Text = "";
+            cboCiudad.SelectedIndex = -1;
+            cboComuna.SelectedIndex = -1;
+        }
+
+        private void frmClientes_Load(object sender, EventArgs e)
+        {
+            String CadSql;
+            CadSql = "select des_ciudad, cod_ciudad from ciudades ";
+            Subrrutinas.llenarCombobox(cboCiudad, CadSql, "des_ciudad", "cod_ciudad");
+            CadSql = "select des_comuna, cod_comuna from comunas";
+            Subrrutinas.llenarCombobox(cboComuna, CadSql, "des_comuna", "cod_comuna");
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
@@ -124,6 +146,19 @@ namespace Proyecto_Progra_3
             }
         }
 
-    
+        private void cmdLimpiar_MouseClick(object sender, MouseEventArgs e)
+        {
+            limpiar();
+        }
+
+        private void cboCiudad_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboComuna_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+
+        }
     }
 }
