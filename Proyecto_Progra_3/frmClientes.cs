@@ -165,9 +165,7 @@ namespace Proyecto_Progra_3
         }
 
         private void cmdRegistrar_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-            
+        {  
 
         }
     }
