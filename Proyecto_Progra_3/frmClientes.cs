@@ -69,34 +69,10 @@ namespace Proyecto_Progra_3
             this.mskRUT.Text = auxR.formatear(this.mskRUT.Text);
         }
 
-        public static bool validarEmail(string email)
-        {
-            string expresion = "\\W+([-+.']\\W+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-            if (Regex.IsMatch(email, expresion))
-            {
-                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            return false;
-        }
-
         private void txtEmail_Leave(object sender, EventArgs e)
         {
-            if (validarEmail(txtEmail.Text))
-            {
-
-            }
-            else
-            {
-                txtEmail.SelectAll();
-                txtEmail.Focus();
-            }
+            
+         
         }
 
         private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
@@ -110,22 +86,7 @@ namespace Proyecto_Progra_3
 
         private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetter(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
-            {
-                e.Handled = true;
-                return;
-            }
-
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                e.Handled = true;
-                return;
-            }
-
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
-            {
-                e.KeyChar = Convert.ToChar(0);
-            }
+        
         }
 
         private void txtGiro_KeyPress(object sender, KeyPressEventArgs e)
@@ -153,11 +114,60 @@ namespace Proyecto_Progra_3
 
         private void cboCiudad_SelectionChangeCommitted(object sender, EventArgs e)
         {
-
+            String COD;
+            COD = "Select id_ent from ciudades where cod_ciudad ='" + cboCiudad.SelectedItem.ToString() + "';";
+            try
+            {
+                con.EjecutarConsulta(COD);
+                while (con.Rec.Read())
+                {
+                    Ciudades.cod_ciudad = Convert.ToInt32(con.Rec["cod_ciudad"]);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (con.Rec != null)
+                {
+                    con.CerrarConexion();
+                    con.Rec = null;
+                }
+            }
         }
 
         private void cboComuna_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            String COD;
+            COD = "Select id_ent from comuna where cod_comuna ='" + cboCiudad.SelectedItem.ToString() + "';";
+            try
+            {
+                con.EjecutarConsulta(COD);
+                while (con.Rec.Read())
+                {
+                    Comuna.cod_comuna = Convert.ToInt32(con.Rec["cod_comuna"]);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (con.Rec != null)
+                {
+                    con.CerrarConexion();
+                    con.Rec = null;
+                }
+            }
+        }
+
+        private void cmdRegistrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+            
 
         }
     }

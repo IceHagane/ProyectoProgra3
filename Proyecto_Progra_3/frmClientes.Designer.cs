@@ -218,6 +218,7 @@
             this.cmdRegistrar.TabIndex = 17;
             this.cmdRegistrar.Text = "Registrar";
             this.cmdRegistrar.UseVisualStyleBackColor = true;
+            this.cmdRegistrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmdRegistrar_MouseClick);
             // 
             // txtNumero
             // 
@@ -236,7 +237,6 @@
             this.cmdLimpiar.TabIndex = 19;
             this.cmdLimpiar.Text = "Limpiar";
             this.cmdLimpiar.UseVisualStyleBackColor = true;
-
             // 
             // frmClientes
             // 

@@ -47,6 +47,12 @@ namespace Proyecto_Progra_3
             Environment.Exit(0);
         }
 
+        private void ingresarNuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmClientes frmC = new frmClientes();
+            frmC.ShowDialog();
+        }
+
       
     }
 }
