@@ -60,32 +60,36 @@ namespace Proyecto_Progra_3
 
         private void btnIngresar_MouseClick(object sender, MouseEventArgs e)
         {
-            string nom;
-            int prec, stock;
-            nom = txtNombre.Text;
-            prec = int.Parse(txtPrecio.Text);
-            stock = int.Parse(txtStock.Text);
+            String nombre;
+            nombre = txtNombre.Text;
 
-            string CadSql;
-            CadSql = "insert into productos (nom_producto, precio_producto, stock_producto, id_ent) values ('" + nom + "'," + prec + "," +
-            stock + "," + Producto.id_ent + ");";
-
-            try
+            if (nombre.Length >= 1 || cboEntidad.SelectedIndex != -1)
             {
-                if (con.EjecutarIUD(CadSql) > 0)
+                string CadSql;
+                CadSql = "insert into productos (nom_producto, precio_producto, stock_producto, id_ent) values ('" + txtNombre.Text + "'," + txtPrecio.Text + "," +
+                txtStock.Text + "," + cboEntidad.SelectedValue + ")";
+
+                try
                 {
-                    MessageBox.Show("Producto Guardado", "Listo");
-                    limpiar();
+                    if (con.EjecutarIUD(CadSql) > 0)
+                    {
+                        MessageBox.Show("Producto Guardado", "Listo");
+                        limpiar();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Producto NO Guardado", "ERROR");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Producto NO Guardado", "ERROR");
+                    MessageBox.Show(ex.Message);
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
-            }   
+                MessageBox.Show("Debe llenar los campos vacios", "ERROR");
+            }
         }
 
         private void btnLimpiar_MouseClick(object sender, MouseEventArgs e)
@@ -95,30 +99,7 @@ namespace Proyecto_Progra_3
 
         private void cboEntidad_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            String ID;
-            ID = "Select id_ent from datos_entidades where nom_ent ='" + cboEntidad.SelectedItem.ToString() + "';";
 
-
-            try
-            {
-                con.EjecutarConsulta(ID);
-                while (con.Rec.Read())
-                {
-                    Producto.id_ent = Convert.ToInt32(con.Rec["id_ent"]);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                if (con.Rec != null)
-                {
-                    con.CerrarConexion();
-                    con.Rec = null;
-                }
-            }
         }
     }
 }

@@ -69,11 +69,11 @@
             this.cboEntidad.Name = "cboEntidad";
             this.cboEntidad.Size = new System.Drawing.Size(124, 21);
             this.cboEntidad.TabIndex = 19;
-            this.cboEntidad.SelectionChangeCommitted += new System.EventHandler(this.cboEntidad_SelectionChangeCommitted);
             // 
             // txtStock
             // 
             this.txtStock.Location = new System.Drawing.Point(127, 138);
+            this.txtStock.MaxLength = 6;
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(124, 20);
             this.txtStock.TabIndex = 18;
@@ -82,6 +82,7 @@
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(127, 99);
+            this.txtPrecio.MaxLength = 6;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(124, 20);
             this.txtPrecio.TabIndex = 17;
@@ -90,6 +91,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(127, 64);
+            this.txtNombre.MaxLength = 15;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(124, 20);
             this.txtNombre.TabIndex = 16;

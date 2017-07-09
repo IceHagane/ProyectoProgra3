@@ -76,58 +76,79 @@ namespace Proyecto_Progra_3
 
         private void cmdModificar_Click(object sender, EventArgs e)
         {
-            Conexion con = new Conexion();
-            string codProd = txtCodigo.Text;
-            codProd = txtCodigo.Text;
+            String name = txtNombre.Text;
+            String stok = txtStock.Text;
+            String prec = txtPrecio.Text;
 
-            string CadSql;
-            CadSql = "update productos set nom_producto='" + txtNombre.Text + "', precio_producto= '" + txtPrecio.Text + "', stock_producto= '" + txtStock.Text + "' where cod_producto='" + codProd + "'";
+            if (name.Length <= 1 || stok.Length <= 1 || prec.Length <= 1)
+            {
+                MessageBox.Show("Debe llenar los campos disponibles para modificar", "ERROR");
+            }
+            else
+            {
 
-            try
-            {
-                if (con.EjecutarIUD(CadSql) > 0)
+                Conexion con = new Conexion();
+                string codProd = txtCodigo.Text;
+                codProd = txtCodigo.Text;
+
+                string CadSql;
+                CadSql = "update productos set nom_producto='" + txtNombre.Text + "', precio_producto= '" + txtPrecio.Text + "', stock_producto= '" + txtStock.Text + "' where cod_producto='" + codProd + "'";
+
+                try
                 {
-                    MessageBox.Show("Modificacion Completada", "Listo");
-                    limpiar();
+                    if (con.EjecutarIUD(CadSql) > 0)
+                    {
+                        MessageBox.Show("Modificacion Completada", "Listo");
+                        limpiar();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error De Modificacion", "ERROR");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Error De Modificacion", "ERROR");
+                    MessageBox.Show(ex.Message);
                 }
+                llenardgv();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            llenardgv();
         }
 
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
-            Conexion con = new Conexion();
-            string codProd = txtCodigo.Text;
-            codProd = txtCodigo.Text;
+             String Codigo = txtCodigo.Text;
 
-            string CadSql;
-            CadSql = "DELETE FROM productos WHERE cod_producto = '" + codProd + "'";
+             if (Codigo.Length >= 1)
+             {
+                 Conexion con = new Conexion();
+                 string codProd = txtCodigo.Text;
+                 codProd = txtCodigo.Text;
 
-            try
-            {
-                if (con.EjecutarIUD(CadSql) > 0)
-                {
-                    MessageBox.Show("Producto Eliminado", "Listo");
-                    limpiar();
-                }
-                else
-                {
-                    MessageBox.Show("Producto NO Eliminado", "ERROR");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            llenardgv();
+                 string CadSql;
+                 CadSql = "DELETE FROM productos WHERE cod_producto = '" + codProd + "'";
+
+                 try
+                 {
+                     if (con.EjecutarIUD(CadSql) > 0)
+                     {
+                         MessageBox.Show("Producto Eliminado", "Listo");
+                         limpiar();
+                     }
+                     else
+                     {
+                         MessageBox.Show("Producto NO Eliminado", "ERROR");
+                     }
+                 }
+                 catch (Exception ex)
+                 {
+                     MessageBox.Show(ex.Message);
+                 }
+                 llenardgv();
+             }
+             else
+             {
+                 MessageBox.Show("El campo Codigo debe tener un valor referente al codigo de producto", "ERROR");
+             }
         }
 
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -164,6 +185,30 @@ namespace Proyecto_Progra_3
                     Rec.Close();
                     Rec = null;
                 }
+            }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != '\b')
+            {
+                e.KeyChar = Convert.ToChar(0);
+            }
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+            {
+                e.KeyChar = Convert.ToChar(0);
+            }
+        }
+
+        private void txtStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+            {
+                e.KeyChar = Convert.ToChar(0);
             }
         }
     }
