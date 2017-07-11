@@ -48,6 +48,8 @@
             this.cmdRegistrar = new System.Windows.Forms.Button();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.cmdLimpiar = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.mskdgv = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -179,9 +181,9 @@
             // mskRUT
             // 
             this.mskRUT.Location = new System.Drawing.Point(127, 98);
-            this.mskRUT.Mask = "##.###.###.#";
+            this.mskRUT.Mask = "##.###.###";
             this.mskRUT.Name = "mskRUT";
-            this.mskRUT.Size = new System.Drawing.Size(193, 20);
+            this.mskRUT.Size = new System.Drawing.Size(99, 20);
             this.mskRUT.TabIndex = 13;
             this.mskRUT.Leave += new System.EventHandler(this.mskRUT_Leave);
             // 
@@ -237,12 +239,32 @@
             this.cmdLimpiar.TabIndex = 19;
             this.cmdLimpiar.Text = "Limpiar";
             this.cmdLimpiar.UseVisualStyleBackColor = true;
+            this.cmdLimpiar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmdLimpiar_MouseClick_1);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(232, 101);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(10, 13);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "-";
+            // 
+            // mskdgv
+            // 
+            this.mskdgv.Location = new System.Drawing.Point(249, 99);
+            this.mskdgv.Mask = "#";
+            this.mskdgv.Name = "mskdgv";
+            this.mskdgv.Size = new System.Drawing.Size(71, 20);
+            this.mskdgv.TabIndex = 21;
             // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(374, 367);
+            this.Controls.Add(this.mskdgv);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.cmdLimpiar);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.cmdRegistrar);
@@ -265,6 +287,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmClientes";
             this.Text = "Nuevo Cliente/Proveedor";
+            this.Load += new System.EventHandler(this.frmClientes_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,6 +315,8 @@
         private System.Windows.Forms.Button cmdRegistrar;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Button cmdLimpiar;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.MaskedTextBox mskdgv;
 
     }
 }

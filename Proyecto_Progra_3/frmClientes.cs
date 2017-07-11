@@ -23,44 +23,22 @@ namespace Proyecto_Progra_3
 
         public void limpiar() 
         {
-            this.txtNombre.Text = "";
-            this.txtEmail.Text = "";
-            this.txtNumero.Text = "";
-            this.mskRUT.Text = "";
-            this.mskTelefono.Text = "";
-            this.txtDireccion.Text = "";
-            this.txtGiro.Text = "";
+            txtNombre.Text = "";
+            txtEmail.Text = "";
+            txtNumero.Text = "";
+            mskRUT.Text = "";
+            mskTelefono.Text = "";
+            txtDireccion.Text = "";
+            txtGiro.Text = "";
+            mskdgv.Text = "";
             cboCiudad.SelectedIndex = -1;
             cboComuna.SelectedIndex = -1;
         }
 
-        private void frmClientes_Load(object sender, EventArgs e)
-        {
-            String CadSql;
-            CadSql = "select des_ciudad, cod_ciudad from ciudades ";
-            Subrrutinas.llenarCombobox(cboCiudad, CadSql, "des_ciudad", "cod_ciudad");
-            CadSql = "select des_comuna, cod_comuna from comunas";
-            Subrrutinas.llenarCombobox(cboComuna, CadSql, "des_comuna", "cod_comuna"); 
-        }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetter(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
-            {
-                e.Handled = true;
-                return;
-            }
-
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                e.Handled = true;
-                return;
-            }
-
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
-            {
-                e.KeyChar = Convert.ToChar(0);
-            }
+            
         }
 
         private void mskRUT_Leave(object sender, EventArgs e)
@@ -107,66 +85,23 @@ namespace Proyecto_Progra_3
             }
         }
 
-        private void cmdLimpiar_MouseClick(object sender, MouseEventArgs e)
-        {
-            limpiar();
-        }
-
-        private void cboCiudad_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            String COD;
-            COD = "Select id_ent from ciudades where cod_ciudad ='" + cboCiudad.SelectedItem.ToString() + "';";
-            try
-            {
-                con.EjecutarConsulta(COD);
-                while (con.Rec.Read())
-                {
-                    Ciudades.cod_ciudad = Convert.ToInt32(con.Rec["cod_ciudad"]);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                if (con.Rec != null)
-                {
-                    con.CerrarConexion();
-                    con.Rec = null;
-                }
-            }
-        }
-
-        private void cboComuna_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            String COD;
-            COD = "Select id_ent from comuna where cod_comuna ='" + cboCiudad.SelectedItem.ToString() + "';";
-            try
-            {
-                con.EjecutarConsulta(COD);
-                while (con.Rec.Read())
-                {
-                    Comuna.cod_comuna = Convert.ToInt32(con.Rec["cod_comuna"]);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                if (con.Rec != null)
-                {
-                    con.CerrarConexion();
-                    con.Rec = null;
-                }
-            }
-        }
-
         private void cmdRegistrar_MouseClick(object sender, MouseEventArgs e)
         {  
 
+        }
+
+        private void frmClientes_Load_1(object sender, EventArgs e)
+        {
+            String CadSql;
+            CadSql = "select des_ciudad, cod_ciudad from ciudades ";
+            Subrrutinas.llenarCombobox(cboCiudad, CadSql, "des_ciudad", "cod_ciudad");
+            CadSql = "select des_comuna, cod_comuna from comunas";
+            Subrrutinas.llenarCombobox(cboComuna, CadSql, "des_comuna", "cod_comuna"); 
+        }
+
+        private void cmdLimpiar_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            limpiar();
         }
     }
 }
