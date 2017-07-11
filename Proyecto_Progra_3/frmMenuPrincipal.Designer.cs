@@ -41,8 +41,6 @@
             this.gestionarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.cotizaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.generarNuevaCotizaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,8 +49,7 @@
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.clientesToolStripMenuItem,
-            this.productosToolStripMenuItem,
-            this.cotizaciónToolStripMenuItem});
+            this.productosToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(617, 24);
@@ -145,20 +142,6 @@
             this.lblUsuario.TabIndex = 3;
             this.lblUsuario.Text = "...";
             // 
-            // cotizaciónToolStripMenuItem
-            // 
-            this.cotizaciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.generarNuevaCotizaciónToolStripMenuItem});
-            this.cotizaciónToolStripMenuItem.Name = "cotizaciónToolStripMenuItem";
-            this.cotizaciónToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.cotizaciónToolStripMenuItem.Text = "Cotización";
-            // 
-            // generarNuevaCotizaciónToolStripMenuItem
-            // 
-            this.generarNuevaCotizaciónToolStripMenuItem.Name = "generarNuevaCotizaciónToolStripMenuItem";
-            this.generarNuevaCotizaciónToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
-            this.generarNuevaCotizaciónToolStripMenuItem.Text = "Generar Nueva Cotización";
-            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,7 +176,5 @@
         private System.Windows.Forms.ToolStripMenuItem cerrarAplicaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ingresarNuevoClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionarClientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cotizaciónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem generarNuevaCotizaciónToolStripMenuItem;
     }
 }

@@ -96,7 +96,9 @@ namespace Proyecto_Progra_3
             CadSql = "select des_ciudad, cod_ciudad from ciudades ";
             Subrrutinas.llenarCombobox(cboCiudad, CadSql, "des_ciudad", "cod_ciudad");
             CadSql = "select des_comuna, cod_comuna from comunas";
-            Subrrutinas.llenarCombobox(cboComuna, CadSql, "des_comuna", "cod_comuna"); 
+            Subrrutinas.llenarCombobox(cboComuna, CadSql, "des_comuna", "cod_comuna");
+            CadSql = "SELECT des_tipo,id_tipo from tipo_entidades;";
+            Subrrutinas.llenarCombobox(cbxEntidad, CadSql, "des_tipo", "id_tipo");
         }
 
         private void cmdLimpiar_MouseClick_1(object sender, MouseEventArgs e)

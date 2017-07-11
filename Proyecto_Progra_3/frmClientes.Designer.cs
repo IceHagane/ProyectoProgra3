@@ -50,17 +50,19 @@
             this.cmdLimpiar = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.mskdgv = new System.Windows.Forms.MaskedTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbxEntidad = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(115, 9);
+            this.label1.Location = new System.Drawing.Point(113, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 18);
+            this.label1.Size = new System.Drawing.Size(116, 18);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Manejo Clientes";
+            this.label1.Text = "Nueva Entidad";
             // 
             // label2
             // 
@@ -68,9 +70,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 15);
+            this.label2.Size = new System.Drawing.Size(100, 15);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre Cliente:";
+            this.label2.Text = "Nombre Entidad:";
             // 
             // label3
             // 
@@ -126,7 +128,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 229);
+            this.label8.Location = new System.Drawing.Point(12, 262);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 15);
             this.label8.TabIndex = 7;
@@ -136,7 +138,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 256);
+            this.label9.Location = new System.Drawing.Point(12, 289);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 15);
             this.label9.TabIndex = 8;
@@ -190,7 +192,7 @@
             // cboCiudad
             // 
             this.cboCiudad.FormattingEnabled = true;
-            this.cboCiudad.Location = new System.Drawing.Point(127, 228);
+            this.cboCiudad.Location = new System.Drawing.Point(127, 261);
             this.cboCiudad.Name = "cboCiudad";
             this.cboCiudad.Size = new System.Drawing.Size(193, 21);
             this.cboCiudad.TabIndex = 14;
@@ -198,7 +200,7 @@
             // cboComuna
             // 
             this.cboComuna.FormattingEnabled = true;
-            this.cboComuna.Location = new System.Drawing.Point(127, 255);
+            this.cboComuna.Location = new System.Drawing.Point(127, 288);
             this.cboComuna.Name = "cboComuna";
             this.cboComuna.Size = new System.Drawing.Size(193, 21);
             this.cboComuna.TabIndex = 15;
@@ -214,7 +216,7 @@
             // 
             // cmdRegistrar
             // 
-            this.cmdRegistrar.Location = new System.Drawing.Point(127, 292);
+            this.cmdRegistrar.Location = new System.Drawing.Point(127, 330);
             this.cmdRegistrar.Name = "cmdRegistrar";
             this.cmdRegistrar.Size = new System.Drawing.Size(75, 23);
             this.cmdRegistrar.TabIndex = 17;
@@ -233,7 +235,7 @@
             // 
             // cmdLimpiar
             // 
-            this.cmdLimpiar.Location = new System.Drawing.Point(245, 292);
+            this.cmdLimpiar.Location = new System.Drawing.Point(245, 330);
             this.cmdLimpiar.Name = "cmdLimpiar";
             this.cmdLimpiar.Size = new System.Drawing.Size(75, 23);
             this.cmdLimpiar.TabIndex = 19;
@@ -258,11 +260,30 @@
             this.mskdgv.Size = new System.Drawing.Size(71, 20);
             this.mskdgv.TabIndex = 21;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(11, 234);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(67, 13);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Tipo Entidad";
+            // 
+            // cbxEntidad
+            // 
+            this.cbxEntidad.FormattingEnabled = true;
+            this.cbxEntidad.Location = new System.Drawing.Point(127, 231);
+            this.cbxEntidad.Name = "cbxEntidad";
+            this.cbxEntidad.Size = new System.Drawing.Size(193, 21);
+            this.cbxEntidad.TabIndex = 23;
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(374, 367);
+            this.Controls.Add(this.cbxEntidad);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.mskdgv);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.cmdLimpiar);
@@ -317,6 +338,8 @@
         private System.Windows.Forms.Button cmdLimpiar;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.MaskedTextBox mskdgv;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cbxEntidad;
 
     }
 }
