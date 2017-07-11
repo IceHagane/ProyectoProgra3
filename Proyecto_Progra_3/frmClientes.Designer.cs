@@ -264,7 +264,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmClientes";
-            this.Text = "frmClientes";
+            this.Text = "Nuevo Cliente/Proveedor";
             this.ResumeLayout(false);
             this.PerformLayout();
 
