@@ -151,7 +151,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(193, 20);
             this.txtNombre.TabIndex = 9;
-            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+           
             // 
             // txtEmail
             // 
@@ -160,7 +160,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(193, 20);
             this.txtEmail.TabIndex = 10;
-            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
+           
             // 
             // txtGiro
             // 
@@ -178,7 +178,7 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(136, 20);
             this.txtDireccion.TabIndex = 12;
-            this.txtDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccion_KeyPress);
+          
             // 
             // mskRUT
             // 
@@ -222,7 +222,8 @@
             this.cmdRegistrar.TabIndex = 17;
             this.cmdRegistrar.Text = "Registrar";
             this.cmdRegistrar.UseVisualStyleBackColor = true;
-            this.cmdRegistrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmdRegistrar_MouseClick);
+            this.cmdRegistrar.Click += new System.EventHandler(this.cmdRegistrar_Click);
+           
             // 
             // txtNumero
             // 

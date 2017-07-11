@@ -36,10 +36,7 @@ namespace Proyecto_Progra_3
         }
 
 
-        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-        }
+
 
         private void mskRUT_Leave(object sender, EventArgs e)
         {
@@ -47,11 +44,7 @@ namespace Proyecto_Progra_3
             this.mskRUT.Text = auxR.formatear(this.mskRUT.Text);
         }
 
-        private void txtEmail_Leave(object sender, EventArgs e)
-        {
-            
-         
-        }
+    
 
         private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -62,10 +55,7 @@ namespace Proyecto_Progra_3
             }
         }
 
-        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
-        {
-        
-        }
+   
 
         private void txtGiro_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -85,10 +75,7 @@ namespace Proyecto_Progra_3
             }
         }
 
-        private void cmdRegistrar_MouseClick(object sender, MouseEventArgs e)
-        {  
-
-        }
+ 
 
         private void frmClientes_Load_1(object sender, EventArgs e)
         {
@@ -104,6 +91,11 @@ namespace Proyecto_Progra_3
         private void cmdLimpiar_MouseClick_1(object sender, MouseEventArgs e)
         {
             limpiar();
+        }
+
+        private void cmdRegistrar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
