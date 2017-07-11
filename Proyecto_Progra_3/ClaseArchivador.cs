@@ -12,6 +12,6 @@ namespace Proyecto_Progra_3
         public static string password { get; set; }
         public   static int id_privilegio { get; set; }
         public  string usuario_nuevo { get; set; }
-        
+        public static int id_ent { get; set; }
     }
 }

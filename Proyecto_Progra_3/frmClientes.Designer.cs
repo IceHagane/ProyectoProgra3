@@ -39,19 +39,19 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtGiro = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.mskRUT = new System.Windows.Forms.MaskedTextBox();
             this.cboCiudad = new System.Windows.Forms.ComboBox();
             this.cboComuna = new System.Windows.Forms.ComboBox();
-            this.mskTelefono = new System.Windows.Forms.MaskedTextBox();
             this.cmdRegistrar = new System.Windows.Forms.Button();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.cmdLimpiar = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.mskdgv = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.cbxEntidad = new System.Windows.Forms.ComboBox();
+            this.cboEntidad = new System.Windows.Forms.ComboBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.cboRazon = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -151,7 +151,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(193, 20);
             this.txtNombre.TabIndex = 9;
-           
             // 
             // txtEmail
             // 
@@ -160,16 +159,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(193, 20);
             this.txtEmail.TabIndex = 10;
-           
-            // 
-            // txtGiro
-            // 
-            this.txtGiro.Location = new System.Drawing.Point(127, 202);
-            this.txtGiro.MaxLength = 70;
-            this.txtGiro.Name = "txtGiro";
-            this.txtGiro.Size = new System.Drawing.Size(193, 20);
-            this.txtGiro.TabIndex = 11;
-            this.txtGiro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiro_KeyPress);
             // 
             // txtDireccion
             // 
@@ -178,7 +167,6 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(136, 20);
             this.txtDireccion.TabIndex = 12;
-          
             // 
             // mskRUT
             // 
@@ -205,15 +193,6 @@
             this.cboComuna.Size = new System.Drawing.Size(193, 21);
             this.cboComuna.TabIndex = 15;
             // 
-            // mskTelefono
-            // 
-            this.mskTelefono.Location = new System.Drawing.Point(127, 150);
-            this.mskTelefono.Mask = "000-0000";
-            this.mskTelefono.Name = "mskTelefono";
-            this.mskTelefono.Size = new System.Drawing.Size(193, 20);
-            this.mskTelefono.TabIndex = 16;
-            this.mskTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mskTelefono_KeyPress);
-            // 
             // cmdRegistrar
             // 
             this.cmdRegistrar.Location = new System.Drawing.Point(127, 330);
@@ -223,7 +202,6 @@
             this.cmdRegistrar.Text = "Registrar";
             this.cmdRegistrar.UseVisualStyleBackColor = true;
             this.cmdRegistrar.Click += new System.EventHandler(this.cmdRegistrar_Click);
-           
             // 
             // txtNumero
             // 
@@ -232,7 +210,6 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(51, 20);
             this.txtNumero.TabIndex = 18;
-            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_KeyPress);
             // 
             // cmdLimpiar
             // 
@@ -270,32 +247,47 @@
             this.label11.TabIndex = 22;
             this.label11.Text = "Tipo Entidad";
             // 
-            // cbxEntidad
+            // cboEntidad
             // 
-            this.cbxEntidad.FormattingEnabled = true;
-            this.cbxEntidad.Location = new System.Drawing.Point(127, 231);
-            this.cbxEntidad.Name = "cbxEntidad";
-            this.cbxEntidad.Size = new System.Drawing.Size(193, 21);
-            this.cbxEntidad.TabIndex = 23;
+            this.cboEntidad.FormattingEnabled = true;
+            this.cboEntidad.Location = new System.Drawing.Point(127, 231);
+            this.cboEntidad.Name = "cboEntidad";
+            this.cboEntidad.Size = new System.Drawing.Size(193, 21);
+            this.cboEntidad.TabIndex = 23;
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(127, 151);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(193, 20);
+            this.txtTelefono.TabIndex = 24;
+            // 
+            // cboRazon
+            // 
+            this.cboRazon.FormattingEnabled = true;
+            this.cboRazon.Location = new System.Drawing.Point(127, 204);
+            this.cboRazon.Name = "cboRazon";
+            this.cboRazon.Size = new System.Drawing.Size(192, 21);
+            this.cboRazon.TabIndex = 25;
             // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(374, 367);
-            this.Controls.Add(this.cbxEntidad);
+            this.Controls.Add(this.cboRazon);
+            this.Controls.Add(this.txtTelefono);
+            this.Controls.Add(this.cboEntidad);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.mskdgv);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.cmdLimpiar);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.cmdRegistrar);
-            this.Controls.Add(this.mskTelefono);
             this.Controls.Add(this.cboComuna);
             this.Controls.Add(this.cboCiudad);
             this.Controls.Add(this.mskRUT);
             this.Controls.Add(this.txtDireccion);
-            this.Controls.Add(this.txtGiro);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label9);
@@ -328,19 +320,19 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtGiro;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.MaskedTextBox mskRUT;
         private System.Windows.Forms.ComboBox cboCiudad;
         private System.Windows.Forms.ComboBox cboComuna;
-        private System.Windows.Forms.MaskedTextBox mskTelefono;
         private System.Windows.Forms.Button cmdRegistrar;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Button cmdLimpiar;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.MaskedTextBox mskdgv;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cbxEntidad;
+        private System.Windows.Forms.ComboBox cboEntidad;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.ComboBox cboRazon;
 
     }
 }
