@@ -186,7 +186,7 @@ namespace Proyecto_Progra_3
 
         private void cmdModificar_Click(object sender, EventArgs e)
         {
-            if (txtDireccion.Text.Length >= 1 && txtEmail.Text.Length >= 1 && txtEntidad.Text.Length >= 1 && txtIDD.Text.Length >= 1 && txtNombre.Text.Length >= 1 && txtNumeroD.Text.Length >= 1 && txtTelefono.Text.Length >= 1 && mskDgv.Text.Length >= 1 && mskRut.Text.Length >= 1 && cboCiudad.SelectedIndex != -1 && cboComuna.SelectedIndex != -1 && cboRazon.SelectedIndex != -1 && cboTipo.SelectedIndex != -1)
+            if (txtDireccion.Text.Length >= 1 && txtEmail.Text.Length >= 1 && txtEntidad.Text.Length >= 1 && txtIDD.Text.Length >= 1 && txtNombre.Text.Length >= 1 && txtNumeroD.Text.Length >= 1 && txtTelefono.Text.Length >= 1 && mskDgv.Text.Length >= 1 && mskRut.Text.Length >= 1 && cboCiudad.SelectedIndex != -1 && cboComuna.SelectedIndex > -1 && cboRazon.SelectedIndex > -1 && cboTipo.SelectedIndex > -1)
             {
                 string codEnt;
                 codEnt = txtEntidad.Text;

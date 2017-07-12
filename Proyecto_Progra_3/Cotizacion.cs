@@ -71,8 +71,56 @@ namespace Proyecto_Progra_3
         {
             if (cboProducto.SelectedIndex != -1)
             {
+
+                string CadSql, ad;
+                ad = cboProducto.SelectedItem.ToString();
+                CadSql = "select p.cod_producto, p.nom_producto, p.precio_producto, p.stock_producto, e.id_ent, e.nom_ent from productos p, datos_entidades e where p.id_ent = e.id_ent and nom_producto Like '" + ad + "';";
+                
+
+                Conexion con = new Conexion();
+                int fila;
+                //MySqlDataReader Rec = null;
+                try
+                {
+                    
+                    con.EjecutarConsulta(CadSql);
+                    dgvCotiszacion.RowCount = 0;
+                    while (con.Rec.Read())
+                    {
+                        dgvCotiszacion.RowCount = dgvCotiszacion.RowCount + 1;
+                        fila = dgvCotiszacion.RowCount - 1;
+                        dgvCotiszacion.Rows[fila].Cells[0].Value = con.Rec["cod_producto"].ToString();
+                        dgvCotiszacion.Rows[fila].Cells[1].Value = con.Rec["nom_producto"].ToString();
+                        dgvCotiszacion.Rows[fila].Cells[2].Value = con.Rec["precio_producto"].ToString();
+                        dgvCotiszacion.Rows[fila].Cells[3].Value = con.Rec["stock_producto"].ToString();
+                        dgvCotiszacion.Rows[fila].Cells[4].Value = con.Rec["id_ent"].ToString();
+                        dgvCotiszacion.Rows[fila].Cells[5].Value = con.Rec["nom_ent"].ToString();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+
+                    con.CerrarConexion();
+                        con.Rec = null;
+                    
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un Producto", "ERROR");
+            }
+        }
+
+        private void cmdBuscar2_Click(object sender, EventArgs e)
+        {
+            if (cboEntidad.SelectedIndex != -1)
+            {
                 string CadSql;
-                CadSql = "select p.cod_producto, p.nom_producto, p.precio_producto, p.stock_producto, e.id_ent, e.nom_ent from productos p, datos_entidades e where p.id_ent = e.id_ent and nom_producto Like '" + cboProducto.SelectedItem + "'";
+                CadSql = "select p.cod_producto, p.nom_producto, p.precio_producto, p.stock_producto, e.id_ent, e.nom_ent from productos p, datos_entidades e where p.id_ent = e.id_ent and nom_ent Like '" + cboEntidad.SelectedItem + "'";
 
                 Conexion con = new Conexion();
                 int fila;
@@ -109,13 +157,8 @@ namespace Proyecto_Progra_3
             }
             else
             {
-                MessageBox.Show("Debe seleccionar un Producto", "ERROR");
+                MessageBox.Show("Debe seleccionar un Proveedor", "ERROR");
             }
-        }
-
-        private void cmdBuscar2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

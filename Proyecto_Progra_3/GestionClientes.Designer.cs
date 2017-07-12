@@ -370,7 +370,7 @@
             // mskDgv
             // 
             this.mskDgv.Location = new System.Drawing.Point(327, 77);
-            this.mskDgv.Mask = "#";
+            this.mskDgv.Mask = "A";
             this.mskDgv.Name = "mskDgv";
             this.mskDgv.Size = new System.Drawing.Size(21, 20);
             this.mskDgv.TabIndex = 52;

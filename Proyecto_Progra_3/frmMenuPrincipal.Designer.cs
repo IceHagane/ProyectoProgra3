@@ -39,10 +39,10 @@
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
             this.cotizacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cotizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,6 +128,21 @@
             this.gestionarProductoToolStripMenuItem.Text = "Gestionar Producto";
             this.gestionarProductoToolStripMenuItem.Click += new System.EventHandler(this.gestionarProductoToolStripMenuItem_Click);
             // 
+            // cotizacionToolStripMenuItem
+            // 
+            this.cotizacionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cotizarToolStripMenuItem});
+            this.cotizacionToolStripMenuItem.Name = "cotizacionToolStripMenuItem";
+            this.cotizacionToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.cotizacionToolStripMenuItem.Text = "Cotizacion";
+            // 
+            // cotizarToolStripMenuItem
+            // 
+            this.cotizarToolStripMenuItem.Name = "cotizarToolStripMenuItem";
+            this.cotizarToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.cotizarToolStripMenuItem.Text = "Cotizar";
+            this.cotizarToolStripMenuItem.Click += new System.EventHandler(this.cotizarToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -147,21 +162,6 @@
             this.lblUsuario.Size = new System.Drawing.Size(47, 37);
             this.lblUsuario.TabIndex = 3;
             this.lblUsuario.Text = "...";
-            // 
-            // cotizacionToolStripMenuItem
-            // 
-            this.cotizacionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cotizarToolStripMenuItem});
-            this.cotizacionToolStripMenuItem.Name = "cotizacionToolStripMenuItem";
-            this.cotizacionToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.cotizacionToolStripMenuItem.Text = "Cotizacion";
-            // 
-            // cotizarToolStripMenuItem
-            // 
-            this.cotizarToolStripMenuItem.Name = "cotizarToolStripMenuItem";
-            this.cotizarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.cotizarToolStripMenuItem.Text = "Cotizar";
-            this.cotizarToolStripMenuItem.Click += new System.EventHandler(this.cotizarToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal
             // 
