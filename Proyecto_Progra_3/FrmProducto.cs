@@ -60,10 +60,7 @@ namespace Proyecto_Progra_3
 
         private void btnIngresar_MouseClick(object sender, MouseEventArgs e)
         {
-            String nombre;
-            nombre = txtNombre.Text;
-
-            if (nombre.Length >= 1 || cboEntidad.SelectedIndex != -1)
+            if (txtNombre.Text.Length >= 1 && cboEntidad.SelectedIndex != -1 && txtPrecio.Text.Length >= 1 && txtStock.Text.Length >= 1)
             {
                 string CadSql;
                 CadSql = "insert into productos (nom_producto, precio_producto, stock_producto, id_ent) values ('" + txtNombre.Text + "'," + txtPrecio.Text + "," +
@@ -95,11 +92,6 @@ namespace Proyecto_Progra_3
         private void btnLimpiar_MouseClick(object sender, MouseEventArgs e)
         {
             limpiar();
-        }
-
-        private void cboEntidad_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-
         }
     }
 }

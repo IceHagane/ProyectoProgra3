@@ -76,17 +76,8 @@ namespace Proyecto_Progra_3
 
         private void cmdModificar_Click(object sender, EventArgs e)
         {
-            String name = txtNombre.Text;
-            String stok = txtStock.Text;
-            String prec = txtPrecio.Text;
-
-            if (name.Length <= 1 || stok.Length <= 1 || prec.Length <= 1)
-            {
-                MessageBox.Show("Debe llenar los campos disponibles para modificar", "ERROR");
-            }
-            else
-            {
-
+            if (txtNombre.Text.Length >= 1 && txtPrecio.Text.Length >= 1 && txtStock.Text.Length >= 1)
+            {               
                 Conexion con = new Conexion();
                 string codProd = txtCodigo.Text;
                 codProd = txtCodigo.Text;
@@ -111,6 +102,10 @@ namespace Proyecto_Progra_3
                     MessageBox.Show(ex.Message);
                 }
                 llenardgv();
+            }
+            else
+            {
+                MessageBox.Show("Debe llenar los campos disponibles para modificar", "ERROR");
             }
         }
 

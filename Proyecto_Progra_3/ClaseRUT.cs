@@ -19,8 +19,7 @@ namespace Proyecto_Progra_3
             else
             {
                 RUT.Replace(".", "");
-                RUT.Replace("-", "");
-                format = "-" + RUT.Substring(RUT.Length - 1);
+                format = "" + RUT.Substring(RUT.Length - 1);
                 for (int i = RUT.Length - 2; i >= 0; i--)
                 {
                     format = RUT.Substring(i, 1) + format;
