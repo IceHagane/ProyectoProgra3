@@ -53,6 +53,10 @@ namespace Proyecto_Progra_3
             frmC.ShowDialog();
         }
 
-      
+        private void gestionarClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionClientes frm = new GestionClientes();
+            frm.ShowDialog();
+        }      
     }
 }

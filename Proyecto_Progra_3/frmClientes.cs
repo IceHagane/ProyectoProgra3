@@ -136,5 +136,12 @@ namespace Proyecto_Progra_3
         {
             
         }
+
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string Email = txtEmail.Text;
+            ClaseRUT Clase = new ClaseRUT();
+            Clase.valida_Email(Email);            
+        }
     }
 }

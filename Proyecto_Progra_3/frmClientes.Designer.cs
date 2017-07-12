@@ -164,6 +164,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(193, 20);
             this.txtEmail.TabIndex = 10;
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
             // txtDireccion
             // 
@@ -212,7 +213,7 @@
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(285, 185);
-            this.txtNumero.MaxLength = 1;
+            this.txtNumero.MaxLength = 5;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(51, 20);
             this.txtNumero.TabIndex = 18;

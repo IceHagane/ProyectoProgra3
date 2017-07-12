@@ -100,6 +100,7 @@
             this.gestionarClientesToolStripMenuItem.Name = "gestionarClientesToolStripMenuItem";
             this.gestionarClientesToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.gestionarClientesToolStripMenuItem.Text = "Gestionar Clientes/Proveedor";
+            this.gestionarClientesToolStripMenuItem.Click += new System.EventHandler(this.gestionarClientesToolStripMenuItem_Click);
             // 
             // productosToolStripMenuItem
             // 

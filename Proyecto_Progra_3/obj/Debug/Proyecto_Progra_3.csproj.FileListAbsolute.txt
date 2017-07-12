@@ -80,3 +80,4 @@ C:\Users\Daniel\Documents\GitHub\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Pro
 C:\Users\Daniel\Documents\GitHub\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.nuevoUsuario.resources
 C:\Users\Daniel\Documents\GitHub\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.Properties.Resources.resources
 C:\Users\Daniel\Documents\GitHub\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.csproj.GenerateResource.Cache
+C:\Users\Daniel\Documents\GitHub\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.GestionClientes.resources
