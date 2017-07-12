@@ -41,7 +41,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 69);
+            this.label1.Location = new System.Drawing.Point(37, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 0;
@@ -50,7 +50,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 98);
+            this.label2.Location = new System.Drawing.Point(37, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 1;
@@ -58,14 +58,14 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(125, 66);
+            this.txtUsuario.Location = new System.Drawing.Point(125, 90);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(157, 20);
             this.txtUsuario.TabIndex = 2;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(125, 95);
+            this.txtPass.Location = new System.Drawing.Point(125, 130);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(157, 20);
@@ -73,7 +73,7 @@
             // 
             // cmdIngresar
             // 
-            this.cmdIngresar.Location = new System.Drawing.Point(206, 122);
+            this.cmdIngresar.Location = new System.Drawing.Point(207, 156);
             this.cmdIngresar.Name = "cmdIngresar";
             this.cmdIngresar.Size = new System.Drawing.Size(75, 23);
             this.cmdIngresar.TabIndex = 4;
@@ -83,7 +83,7 @@
             // 
             // cmdCancelar
             // 
-            this.cmdCancelar.Location = new System.Drawing.Point(125, 121);
+            this.cmdCancelar.Location = new System.Drawing.Point(125, 156);
             this.cmdCancelar.Name = "cmdCancelar";
             this.cmdCancelar.Size = new System.Drawing.Size(75, 23);
             this.cmdCancelar.TabIndex = 5;
@@ -104,7 +104,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 190);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(335, 272);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdIngresar);
