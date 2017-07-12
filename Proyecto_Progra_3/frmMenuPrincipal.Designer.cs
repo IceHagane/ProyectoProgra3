@@ -41,6 +41,8 @@
             this.gestionarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.cotizacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cotizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +51,8 @@
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.clientesToolStripMenuItem,
-            this.productosToolStripMenuItem});
+            this.productosToolStripMenuItem,
+            this.cotizacionToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(916, 24);
@@ -145,6 +148,21 @@
             this.lblUsuario.TabIndex = 3;
             this.lblUsuario.Text = "...";
             // 
+            // cotizacionToolStripMenuItem
+            // 
+            this.cotizacionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cotizarToolStripMenuItem});
+            this.cotizacionToolStripMenuItem.Name = "cotizacionToolStripMenuItem";
+            this.cotizacionToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.cotizacionToolStripMenuItem.Text = "Cotizacion";
+            // 
+            // cotizarToolStripMenuItem
+            // 
+            this.cotizarToolStripMenuItem.Name = "cotizarToolStripMenuItem";
+            this.cotizarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cotizarToolStripMenuItem.Text = "Cotizar";
+            this.cotizarToolStripMenuItem.Click += new System.EventHandler(this.cotizarToolStripMenuItem_Click);
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,5 +198,7 @@
         private System.Windows.Forms.ToolStripMenuItem cerrarAplicaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ingresarNuevoClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionarClientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cotizacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cotizarToolStripMenuItem;
     }
 }

@@ -82,3 +82,4 @@ C:\Users\Daniel\Documents\GitHub\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Pro
 C:\Users\Daniel\Documents\GitHub\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.csproj.GenerateResource.Cache
 C:\Users\Daniel\Documents\GitHub\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.GestionClientes.resources
 C:\Users\Pablo\Desktop\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.GestionClientes.resources
+C:\Users\Daniel\Documents\GitHub\ProyectoProgra3\Proyecto_Progra_3\obj\Debug\Proyecto_Progra_3.Cotizacion.resources

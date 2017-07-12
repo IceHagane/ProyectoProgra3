@@ -57,6 +57,12 @@ namespace Proyecto_Progra_3
         {
             GestionClientes frm = new GestionClientes();
             frm.ShowDialog();
+        }
+
+        private void cotizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cotizacion c = new Cotizacion();
+            c.ShowDialog();
         }      
     }
 }
