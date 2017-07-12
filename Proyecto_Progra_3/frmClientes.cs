@@ -139,9 +139,10 @@ namespace Proyecto_Progra_3
 
         private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
-            string Email = txtEmail.Text;
-            ClaseRUT Clase = new ClaseRUT();
-            Clase.valida_Email(Email);            
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '@' && e.KeyChar != '.')
+            {
+                e.KeyChar = Convert.ToChar(0);
+            }           
         }
     }
 }
